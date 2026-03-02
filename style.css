@@ -71,14 +71,14 @@ html, body{
         -webkit-text-stroke: 1px #ffff;
         color: #ffff;
         font-weight: 500;
-        opacity: 0;
+        opacity: 1;
     }
     47%{
         font-family: "plain light";
         -webkit-text-stroke: 1px #ffff;
         color: #ffff;
         font-weight: 500;
-        opacity: 1;
+        opacity: 0;
     }
     50%{
         font-family: "silkserif-lightitalic";
@@ -92,7 +92,51 @@ html, body{
         -web-kit-text-stroke:0.1px #fff;
         font-weight: 500;
         color: transparent;
-        opacity: 1;
+        opacity: 0;
     }
 }
+#page1 #nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4vw 4vw;
+}
+#nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+#nav-part2 h4{
+    font-size: 1vw;
+    font-weight: 500;
+}
 
+.hero{
+    width: 72%;
+    margin-left: 27%;
+}
+.hero h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    line-height: 7.2vw;
+}
+.hero h1 u{
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+    display: inline-block; 
+  margin-top: 15px;
+}
+.hero:nth-child(2){
+    margin-top: 18vh;
+}
+.crsr{
+    height: 3.5vw;
+    width: 3.5vw;
+    border-radius: 50%;
+    border: 1px solid rgb(121, 118, 118);
+    position: fixed;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%,-50%);
+}
