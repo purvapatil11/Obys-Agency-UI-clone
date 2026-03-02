@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Plain light';
-    color: #fff;
+    color: #ffff;
+    background-color: #151515;
 }
 html, body{
     height: 100%;
@@ -11,8 +12,7 @@ html, body{
 }
 #main{
     position: relative;
-    background-color: #111;
-}
+    }
 #page1{
     height: 100%;
     width: 100%;
@@ -23,9 +23,8 @@ html, body{
     width: 100%;
     position: fixed;
     z-index: 999;
-    background-color: #0B0B0B;
+    background-color: #151515;
     padding: 25vh 10vw;
-
 }
 #line{
     /* background-color: red; */
@@ -46,7 +45,7 @@ html, body{
 #line1-part1 h5, #line1-part1 h6{
     font-size: 3vw;
     font-weight: 1vw;
-     font-family: "silkserif-lighttitalic";
+     font-family: "italic";
 }
 #line1-part1 h5{
     width: 5vw;
@@ -61,5 +60,39 @@ html, body{
     font-size: 6.5vw;
     text-transform: uppercase;
     font-weight: 900;
+    opacity: 0;
+    animation-name: anime;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes anime{
+    0%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #ffff;
+        color: #ffff;
+        font-weight: 500;
+        opacity: 0;
+    }
+    47%{
+        font-family: "plain light";
+        -webkit-text-stroke: 1px #ffff;
+        color: #ffff;
+        font-weight: 500;
+        opacity: 1;
+    }
+    50%{
+        font-family: "silkserif-lightitalic";
+        -web-kit-text-stroke:0.1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 1;
+    }
+    100%{
+        font-family: "silkserif-lightitalic";
+        -web-kit-text-stroke:0.1px #fff;
+        font-weight: 500;
+        color: transparent;
+        opacity: 1;
+    }
 }
 
