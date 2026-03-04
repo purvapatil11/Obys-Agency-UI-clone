@@ -219,7 +219,7 @@ body{
     min-height: 100vh;
     width: 100%;
     background-color: #151515;
-    padding-top: 5vh;
+    padding-top: 7vh;
 }
 #page4-content{
     width: 72vw;
@@ -252,6 +252,102 @@ body{
     width: 19%;
     margin-left: 1vw;
 }
-#blue{
-    background-color: #3F7DF4;
+.page4-bluediv{
+    background-color:#3F7DF4 ;
+    width: 30vw;
+    padding:4vw 2vw;
+    position: relative;
+    margin-top: -35vh;
+    margin-left: 26vw;
+}
+.blue-div-elem{
+    background-color:#3F7DF4 ;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2vw;
+    border-bottom: 2px solid #ffffffce;
+}
+.blue-div-elem,
+.blue-div-elem h4,
+.blue-div-elem p {
+  background: transparent;
+}
+.blue-div-elem p{
+    width: 40%;
+    font-size: 1vw;
+}
+.blue-div-elem h4{
+    font-size:1.5vw;
+    font-weight: 500;
+}
+.underline{
+    border-bottom: 2px solid #ffff;
+}
+.content{
+    margin-top: 1px;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    padding: 5vw 0;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+}
+.elem{
+    white-space: nowrap;
+    margin-bottom: -1vw;
+}
+.elem2{
+    white-space: nowrap;
+    margin-bottom: -1vw;
+}
+.elem h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px  #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes anime{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2 h1{
+    font-size: 7vw;
+    -webkit-text-stroke: 1px  #fff;
+    font-weight: 400;
+    color: transparent;
+    text-transform: uppercase;
+    display: inline-block;
+    transform: translateX(calc(-100% -20px));
+    margin-right: 16px;
+    animation-name: anime;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+.elem span{
+    font-style: italic;
+    font-family: silkserif-lightitalic;
+    color: transparent;
+}
+.elem2 span{
+    font-style: italic;
+    font-family: silkserif-lightitalic;
+    color: transparent;
 }
