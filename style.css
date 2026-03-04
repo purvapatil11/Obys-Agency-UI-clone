@@ -11,6 +11,9 @@ html, body{
     width: 100%;
     background-color: #151515;
 }
+body{
+    overflow-x: hidden;
+}
 #main{
     position: relative;
     background: #151515;
@@ -216,9 +219,39 @@ html, body{
     min-height: 100vh;
     width: 100%;
     background-color: #151515;
+    padding-top: 5vh;
 }
 #page4-content{
     width: 72vw;
     position: relative;
     margin-left: 28%;
+}
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+}
+#page4-content .underline{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    margin: 5vw 0;
+}
+#page4-content>p{
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+#page4-flex{
+    display: flex;
+}
+#page4-flex img{
+    width: 48%; 
+}
+#page4-flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+#blue{
+    background-color: #3F7DF4;
 }
