@@ -128,6 +128,16 @@ body{
     position: relative;
     z-index: 999;
 }
+
+/* #hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: "silk serif";
+    left: 22%;
+    top: 29%;
+} */
 .hero h1{
     font-size: 7vw;
     font-weight: 600;
@@ -220,6 +230,14 @@ body{
     width: 100%;
     background-color: #151515;
     padding-top: 7vh;
+}
+#page4 h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 5vw;
+    font-weight: 100;
+    font-family: silkserif-lightitalic;
+    left: -10%;
 }
 #page4-content{
     width: 72vw;
@@ -350,4 +368,61 @@ body{
     font-style: italic;
     font-family: silkserif-lightitalic;
     color: transparent;
+}
+#footer{
+    height: 80vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw;
+}
+#footer h1{
+    font-size: 8vw;
+    width: 60vw;
+    text-transform: uppercase;
+}
+#footer h1::before{
+    content: "04";
+    position: absolute;
+    font-size: 5vw;
+    font-weight: 100;
+    font-family: silkserif-lightitalic;
+    left: 20%;
+}
+.underline{
+    height: 2px;
+    width: 100%;
+    background-color: #ffffffbd;
+    margin: 3vw 0;
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    gap: 2vw;
+    padding-bottom: 4vw;
+    padding-right: 2vw;
+}
+#footer-div h6{
+    font-size: 0.9vw;
+    margin-bottom: 1vw;
+}
+.box{
+    width: 20%;
+}
+.box2{
+    padding-left: 2vw;
+}
+#footer-div h5{
+    font-size: 1.4vw;
+    font-weight: 500;
+    margin: 0.2vh 0;
+}
+#footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+}
+.name{
+    padding-bottom: 5vw;
 }
