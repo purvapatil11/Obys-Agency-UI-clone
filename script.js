@@ -1,4 +1,46 @@
+function locomotiveAnimation(){
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true
+    });
+
+    // update ScrollTrigger when Locomotive scrolls
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    // tell ScrollTrigger to use Locomotive scroll
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length
+            ? locoScroll.scrollTo(value, 0, 0)
+            : locoScroll.scroll.instance.scroll.y;
+        },
+
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        },
+
+        pinType: document.querySelector("#main").style.transform
+        ? "transform"
+        : "fixed"
+    });
+
+    // refresh locomotive when ScrollTrigger refreshes
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+}
+
+
 function loadingAnimation(){
+
     var tl = gsap.timeline()
 
     tl.from("#line h1",{
@@ -11,16 +53,19 @@ function loadingAnimation(){
     tl.from("#line1-part1 h5, #line1-part1 h6",{
         opacity:0,
         onStart:function () {
+
             var h5timer = document.querySelector("#line1-part1 h5")
             var grow = 0
+
             setInterval(function(){
+
                 if(grow < 100){
                     grow++
                     h5timer.innerHTML = grow
-                } else{
-                    h5timer.innerHTML = grow
                 }
+
             },35)
+
         }
     })
 
@@ -43,10 +88,9 @@ function loadingAnimation(){
     })
 
     tl.to("#loader",{
-        display: "none"
+        display:"none"
     })
 
-    
     tl.from(".hero h1, .hero h2, .hero h3",{
         y:120,
         opacity:0,
@@ -56,25 +100,35 @@ function loadingAnimation(){
     tl.from("#nav",{
         opacity:0
     })
+
 }
 
-loadingAnimation()
 
 function cursorAnimation(){
+
     const crsr = document.querySelector(".crsr")
 
     document.addEventListener("mousemove",function(dets){
+
         if(!crsr) return
+
         gsap.to(crsr,{
-            left:dets.x,
-            top:dets.y,
-            duration:0.15
+            x:dets.clientX,
+            y:dets.clientY,
+            duration:0.2,
+            ease:"power2.out"
         })
+
     })
 
     if(document.querySelector("#nav-part2 h4")){
         Shery.makeMagnet("#nav-part2 h4", {})
     }
+
 }
 
+
+// function calls
+locomotiveAnimation()
+loadingAnimation()
 cursorAnimation()
