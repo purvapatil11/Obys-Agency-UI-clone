@@ -63,17 +63,6 @@ Obys-UI-Clone
 
 ---
 
-## Learning Outcomes
-
-Through this project I learned:
-
-- How **GSAP animation timelines work**
-- How to integrate **Locomotive Scroll with ScrollTrigger**
-- Creating **scroll-based UI interactions**
-- Managing complex animations in modern frontend development
-- Debugging animation issues in JavaScript
-
----
 
 ## How to Run the Project
 
@@ -100,5 +89,6 @@ This project is inspired by the original website **Obys Agency**.
 The project is created **only for educational and practice purposes**.
 
 ---
+
 
 
